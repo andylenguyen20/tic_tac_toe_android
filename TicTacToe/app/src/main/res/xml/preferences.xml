@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Random">
+        <Preference android:title="Start random game"
+            android:key="pref_start_game_button">
+            <intent
+                android:action="com.sandy_rock_studios.macbookair.tictactoe.SETTING_START_ACTIVITY"
+                android:targetPackage="com.sandy_rock_studios.macbookair.tictactoe"
+                android:targetClass="com.sandy_rock_studios.macbookair.tictactoe.activities.loading.LoadingRandomGameActivity" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Create Your Own">
+        <Preference android:title="Start your own game"
+            android:key="pref_start_game_button">
+            <intent
+                android:action="com.sandy_rock_studios.macbookair.tictactoe.SETTING_START_ACTIVITY"
+                android:targetPackage="com.sandy_rock_studios.macbookair.tictactoe"
+                android:targetClass="com.sandy_rock_studios.macbookair.tictactoe.activities.loading.LoadingOwnGameActivity" />
+        </Preference>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Custom Opponent">
+        <EditTextPreference
+            android:key="pref_custom_opponent_name"
+            android:defaultValue="Enter a username"
+            android:title="Enter your opponent's name">
+        </EditTextPreference>
+        <Preference android:title="Join match made by opponent">
+            <intent
+                android:action="com.sandy_rock_studios.macbookair.tictactoe.SETTING_START_ACTIVITY"
+                android:targetPackage="com.sandy_rock_studios.macbookair.tictactoe"
+                android:targetClass="com.sandy_rock_studios.macbookair.tictactoe.activities.loading.LoadingCustomOpponentGameActivity" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>
